@@ -1,20 +1,24 @@
 # devopsWay-1
+```sh
 Note : it will be implement in CentOS 7
-
+```
 Master Node will be having function as image generator as well as node controller for kubernetes cluster. It will be in the outside of the cluster
-
+```sh
 So in this Master we need to install these packages or applications :
 1. git
 2. maven
 3. docker
 4. kubelet
 5. Jenkins
+```
 
 Jenkins we put in the last step so we can test by Jenkins the previous app like git, maven and docker in the manager
 
 Before they are installed we need the java 
 
+```sh
 yum -y install java-1.8*
+```
 
 Update ~/.bash_profile , in this step we still use user root
 ``` sh
