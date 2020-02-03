@@ -17,31 +17,39 @@ Before they are installed we need the java
 yum -y install java-1.8*
 
 Update ~/.bash_profile , in this step we still use user root
-
+``` sh
 JAVA_HOME=`find /usr/lib/jvm/java-1.8* | head -n 3 | tail -1`
 export JAVA_HOME
 PATH=$PATH:$JAVA_HOME
 export PATH
-
+```
 Check the PATH by echoing $PATH and check the version
 echo $PATH
 java -version
 
 in this example we use version 1.8.0
+```sh
     openjdk version "1.8.0_242"
     OpenJDK Runtime Environment (build 1.8.0_242-b08)
     OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
+```
 
 1. Installing git
 we should have git account of course, for this step we will use github
-yum -y install git
 
+    ```sh
+    yum -y install git
+    ```
 
 2. Installing maven
 Change to directory /opt/ for app
-cd /opt
+    ``` sh
+    cd /opt
+    ```
+    
 Downloading maven package from the maven official website
 
+```sh
 wget http://mirrors.estointernet.in/apache/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
 
 tar -zxvf apache-maven-3.6.1-bin.tar.gz
@@ -53,7 +61,7 @@ M2=/opt/maven/bin
 
 PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2
 export PATH
-
+```
 Updating bash_profile for maven
 
 cat << EOF > ~/.bash_profile
