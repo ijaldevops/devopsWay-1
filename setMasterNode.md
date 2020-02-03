@@ -115,7 +115,7 @@ in this example we use version 1.8.0
     sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
     yum -y install jenkins
     ```
-Open the web http://localhost:8080
+Open the web http://ipMaster:8080
 for the first login attempt follow the fist landing page to get the initial key after login success change the password in admin >> configure
 
 
